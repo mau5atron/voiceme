@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# voiceme
+Voice memo web app
+>>>>>>> 6ca94c57c8bd539d2587f2973f9ad9e45ff2dd4c
