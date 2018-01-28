@@ -23,18 +23,18 @@ default: &default
 
 development:
   <<: *default
-  database: voiceme-api_development
-  username: voiceme-api
+  database: voiceme_api_development
+  username: voiceme_api
   password: password1
 
 test:
   <<: *default
-  database: voiceme-api_test
-  username: voiceme-api
+  database: voiceme_api_test
+  username: voiceme_api
   password: password1
-  
+
 production:
   <<: *default
-  database: voiceme-api_production
-  username: voiceme-api
+  database: voiceme_api_production
+  username: voiceme_api
   password: <%= ENV['VOICEME-API_DATABASE_PASSWORD'] %>
