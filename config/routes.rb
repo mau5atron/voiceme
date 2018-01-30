@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  # resources :users
-  get '/index' => 'user#index'
+  resources :users, controller: :user
+  resources :memos, controller: :memo
+  # get '/users' => 'user#index'
+  # get '/memos' => 'memo#index'
 end
