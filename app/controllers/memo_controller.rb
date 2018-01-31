@@ -13,6 +13,7 @@ class MemoController < ApplicationController
 		@memo = Memo.new(memo_params)
 
 		# adds current logged in user as creator of memo
+		# current_user is being called from application controller / universal access
 		@memo.user = current_user
 
 		if @memo.save
