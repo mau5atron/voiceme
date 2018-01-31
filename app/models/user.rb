@@ -26,7 +26,7 @@ class User < ApplicationRecord
 		end
 	end
 
-	def encrypt_password do
+	def encrypt_password
 		# if password is present in user model for single user 
 		# password is encrypted
 		if password.present?
