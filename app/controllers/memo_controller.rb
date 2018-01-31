@@ -10,12 +10,15 @@ class MemoController < ApplicationController
 	end
 
 	def create
-		@user = User.new(memo_params)
+		@memo = Memo.new(memo_params)
+
+		# adds current logged in user as creator of memo
+		@memo.user = current_user
 
 		if @memo.save
-			render json: @user, status: :created, location: @memo
+			render json: @memo, status: :created, location: @memo
 		else
-			render json: @user.errors, status: :unprocessable_entity
+			render json: @memo.errors, status: :unprocessable_entity
 		end
 	end
 
