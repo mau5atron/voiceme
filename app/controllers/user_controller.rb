@@ -1,5 +1,6 @@
 class UserController < ApplicationController
-	# before_action :set_user, only: [:show, :update. :destroy]
+	before_action :set_user, only: [:show, :update, :destroy]
+	skip_before_action :require_login, only: [:create], raise: false
 
 	# get '/users'
 	def index
@@ -45,9 +46,6 @@ class UserController < ApplicationController
 	end
 	# only allows :name and :email to be updated
 	def user_params
-		params.permit(:name, :email)
+		params.permit(:name, :email, :password)
 	end
-
-
-
 end
